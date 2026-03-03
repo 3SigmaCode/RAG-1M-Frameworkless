@@ -1,0 +1,20 @@
+# --- INGESTION & PARSING (The Data Engine) ---
+aiohttp==3.9.3          # Non-blocking HTTP client for streaming PDFs
+PyMuPDF==1.23.26        # High-performance C-based PDF parser (imported as fitz)
+
+# --- API & SERVER (The Delivery Layer) ---
+fastapi==0.109.2        # Asynchronous API framework
+uvicorn[standard]==0.27.1 # ASGI server for handling concurrent requests
+gunicorn==21.2.0        # Process manager for multi-core scaling
+
+# --- DATABASES (The Memory) ---
+qdrant-client>=1.11.0    # High-speed gRPC client for vector storage
+asyncpg==0.29.0         # Raw, high-performance async PostgreSQL client
+SQLAlchemy==2.0.27      # Async ORM for relational metadata
+
+# --- CACHING (The Speed Multiplier) ---
+redis==5.0.1            # Semantic caching and asynchronous queue management
+
+# --- AI & INFERENCE (The Brain) ---
+sentence-transformers==2.5.1 # For local cross-encoder reranking and embedding tests
+groq==0.4.1             # Sub-second latency API client for Llama-3 (Query Expansion/CRAG)
